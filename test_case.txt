@@ -1,0 +1,417 @@
+$ python gbnnode.py 1111 2222 5 -p 0.1
+sender: 
+node> send abcdefghijklmnopq
+[1493001331.59] packet0 a sent
+[1493001331.59] packet1 b sent
+[1493001331.59] packet2 c sent
+[1493001331.59] packet3 d sent
+[1493001331.59] packet4 e sent
+[1493001331.6] ACK0 received, window moves to 1
+[1493001331.6] ACK1 received, window moves to 2
+[1493001331.6] ACK2 received, window moves to 3
+[1493001331.6] packet5 f sent
+[1493001331.6] packet6 g sent
+[1493001331.6] packet7 h sent
+[1493001332.1] packet3 timeout
+[1493001332.1] packet3 d sent
+[1493001332.1] packet4 e sent
+[1493001332.1] packet5 f sent
+[1493001332.1] packet6 g sent
+[1493001332.1] packet7 h sent
+[1493001332.1] ACK3 discarded
+[1493001332.1] ACK4 received, window moves to 5
+[1493001332.1] packet8 i sent
+[1493001332.1] ACK5 received, window moves to 6
+[1493001332.1] ACK6 received, window moves to 7
+[1493001332.1] ACK7 received, window moves to 8
+[1493001332.1] ACK8 received, window moves to 9
+[1493001332.1] packet9 j sent
+ [1493001332.1] ACK9 discarded
+[1493001332.1] packet10 k sent
+[1493001332.1] packet11 l sent
+[1493001332.1] ACK10 received, window moves to 11
+[1493001332.1] packet12 m sent
+[1493001332.1] packet13 n sent
+[1493001332.1] packet14 o sent
+[1493001332.1] packet15 p sent
+[1493001332.11] ACK11 received, window moves to 12
+ [1493001332.11] packet16 q sent
+[1493001332.11] ACK11 discarded
+[1493001332.11] ACK11 discarded
+[1493001332.61] packet12 timeout
+[1493001332.61] packet12 m sent
+[1493001332.61] packet13 n sent
+[1493001332.61] packet14 o sent
+[1493001332.61] packet15 p sent
+[1493001332.61] packet16 q sent
+[1493001333.11] packet12 timeout
+[1493001333.11] packet12 m sent
+[1493001333.11] packet13 n sent
+[1493001333.11] packet14 o sent
+[1493001333.11] packet15 p sent
+[1493001333.11] packet16 q sent
+[1493001333.11] ACK12 discarded
+[1493001333.12] ACK13 received, window moves to 14
+[1493001333.12] ACK14 received, window moves to 15
+[1493001333.12] ACK15 received, window moves to 16
+[1493001333.12] ACK16 received, window moves to 17
+[Summary] 5/37 packets dropped, loss rate = 0.135135135135
+
+receiver: 
+$ node> [1493001331.59] packet0 a received
+[1493001331.59] ACK0 sent, expecting packet 1
+[1493001331.59] packet1 b received
+[1493001331.59] ACK1 sent, expecting packet 2
+[1493001331.59] packet2 c received
+[1493001331.59] ACK2 sent, expecting packet 3
+[1493001331.6] packet3 d discarded
+[1493001331.6] ACK2 sent, expecting packet 3
+[1493001331.6] packet4 e received
+[1493001331.6] ACK2 sent, expecting packet 3
+[1493001331.6] packet5 f received
+[1493001331.6] ACK2 sent, expecting packet 3
+[1493001331.6] packet6 g received
+[1493001331.6] ACK2 sent, expecting packet 3
+[1493001331.6] packet7 h received
+[1493001331.6] ACK2 sent, expecting packet 3
+[1493001332.1] packet3 d received
+[1493001332.1] ACK3 sent, expecting packet 4
+[1493001332.1] packet4 e received
+[1493001332.1] ACK4 sent, expecting packet 5
+[1493001332.1] packet5 f received
+[1493001332.1] ACK5 sent, expecting packet 6
+[1493001332.1] packet6 g received
+[1493001332.1] ACK6 sent, expecting packet 7
+[1493001332.1] packet7 h received
+[1493001332.1] ACK7 sent, expecting packet 8
+[1493001332.1] packet8 i received
+[1493001332.1] ACK8 sent, expecting packet 9
+[1493001332.1] packet9 j received
+[1493001332.1] ACK9 sent, expecting packet 10
+[1493001332.1] packet10 k received
+[1493001332.1] ACK10 sent, expecting packet 11
+[1493001332.1] packet11 l received
+[1493001332.1] ACK11 sent, expecting packet 12
+[1493001332.1] packet12 m discarded
+[1493001332.1] ACK11 sent, expecting packet 12
+[1493001332.1] packet13 n received
+[1493001332.1] ACK11 sent, expecting packet 12
+[1493001332.1] packet14 o received
+[1493001332.1] ACK11 sent, expecting packet 12
+[1493001332.1] packet15 p received
+[1493001332.1] ACK11 sent, expecting packet 12
+[1493001332.11] packet16 q received
+[1493001332.11] ACK11 sent, expecting packet 12
+[1493001332.61] packet12 m discarded
+[1493001332.61] ACK11 sent, expecting packet 12
+[1493001332.61] packet13 n received
+[1493001332.61] ACK11 sent, expecting packet 12
+[1493001332.61] packet14 o received
+[1493001332.61] ACK11 sent, expecting packet 12
+[1493001332.61] packet15 p received
+[1493001332.61] ACK11 sent, expecting packet 12
+[1493001332.61] packet16 q received
+[1493001332.61] ACK11 sent, expecting packet 12
+[1493001333.11] packet12 m received
+[1493001333.11] ACK12 sent, expecting packet 13
+[1493001333.11] packet13 n received
+[1493001333.11] ACK13 sent, expecting packet 14
+[1493001333.11] packet14 o received
+[1493001333.11] ACK14 sent, expecting packet 15
+[1493001333.11] packet15 p received
+[1493001333.11] ACK15 sent, expecting packet 16
+[1493001333.11] packet16 q received
+[1493001333.11] ACK16 sent, expecting packet 17
+[Summary] 3/32 packets discarded, loss rate = 0.09375
+
+
+$ pytode.py 1111 2222 5 -d 7
+node> send abcdefghsdfsldfjaosdifjaidjaidfjiaugha
+[1493001507.7] packet0 a sent
+[1493001507.7] packet1 b sent
+[1493001507.7] packet2 c sent
+[1493001507.7] packet3 d sent
+[1493001507.7] packet4 e sent
+[1493001507.7] ACK0 received, window moves to 1
+[1493001507.71] ACK1 received, window moves to 2
+[1493001507.71] packet5 f sent
+ [1493001507.71] ACK2 received, window moves to 3
+[1493001507.71] ACK3 received, window moves to 4
+[1493001507.71] ACK4 received, window moves to 5
+[1493001507.71] packet6 g sent
+[1493001507.71] packet7 h sent
+[1493001507.71] packet8 s sent
+[1493001507.71] packet9 d sent
+[1493001507.71] ACK5 received, window moves to 6
+[1493001507.71] ACK6 discarded
+[1493001507.71] packet10 f sent
+[1493001507.71] ACK7 received, window moves to 8
+[1493001507.71] ACK8 received, window moves to 9
+[1493001507.71] ACK9 received, window moves to 10
+ [1493001507.71] packet11 s sent
+[1493001507.71] ACK10 received, window moves to 11
+[1493001507.71] packet12 l sent
+ [1493001507.71] ACK11 received, window moves to 12
+[1493001507.71] ACK12 received, window moves to 13
+ [1493001507.71] packet13 d sent
+[1493001507.71] packet14 f sent
+[1493001507.71] packet15 j sent
+[1493001507.71] packet16 a sent
+[1493001507.71] packet17 o sent
+[1493001507.71] ACK13 discarded
+[1493001507.71] ACK14 received, window moves to 15
+[1493001507.71] ACK15 received, window moves to 16
+[1493001507.71] packet18 s sent
+ [1493001507.71] ACK16 received, window moves to 17
+[1493001507.71] ACK17 received, window moves to 18
+[1493001507.71] ACK18 received, window moves to 19
+[1493001507.71] packet19 d sent
+[1493001507.71] packet20 i sent
+[1493001507.71] packet21 f sent
+[1493001507.71] packet22 j sent
+[1493001507.71] packet23 a sent
+[1493001507.71] ACK19 received, window moves to 20
+[1493001507.71] ACK20 discarded
+ [1493001507.71] packet24 i sent
+[1493001507.71] ACK21 received, window moves to 22
+[1493001507.71] packet25 d sent
+[1493001507.71] packet26 j sent
+[1493001508.21] packet22 timeout
+[1493001508.21] packet22 j sent
+[1493001508.21] packet23 a sent
+[1493001508.21] packet24 i sent
+[1493001508.21] packet25 d sent
+[1493001508.21] packet26 j sent
+[1493001508.21] ACK22 received, window moves to 23
+[1493001508.21] ACK23 discarded
+ [1493001508.21] packet27 a sent
+[1493001508.21] ACK24 received, window moves to 25
+[1493001508.21] ACK25 received, window moves to 26
+ [1493001508.21] packet28 i sent
+[1493001508.21] ACK26 received, window moves to 27
+[1493001508.21] packet29 d sent
+[1493001508.21] ACK27 received, window moves to 28
+[1493001508.21] ACK28 received, window moves to 29
+[1493001508.21] ACK29 received, window moves to 30
+[1493001508.21] ACK30 discarded
+[1493001508.21] packet30 f sent
+[1493001508.21] packet31 j sent
+[1493001508.21] packet32 i sent
+[1493001508.21] packet33 a sent
+[1493001508.21] packet34 u sent
+[1493001508.21] ACK31 received, window moves to 32
+[1493001508.21] ACK32 received, window moves to 33
+[1493001508.21] packet35 g sent
+[1493001508.21] packet36 h sent
+[1493001508.21] ACK33 received, window moves to 34
+[1493001508.21] ACK34 received, window moves to 35
+[1493001508.21] ACK35 received, window moves to 36
+[1493001508.21] packet37 a sent
+ [1493001508.21] ACK36 received, window moves to 37
+[1493001508.71] packet37 timeout
+[1493001508.71] packet37 a sent
+[1493001508.71] ACK37 discarded
+[1493001509.21] packet37 timeout
+[1493001509.21] packet37 a sent
+[1493001509.21] ACK37 received, window moves to 38
+[Summary] 6/43 packets dropped, loss rate = 0.139534883721
+
+$ pynode.py 2222 1111 5 -p 0.1
+node> [1493001507.7] packet0 a received
+[1493001507.7] ACK0 sent, expecting packet 1
+[1493001507.7] packet1 b received
+[1493001507.7] ACK1 sent, expecting packet 2
+[1493001507.7] packet2 c received
+[1493001507.7] ACK2 sent, expecting packet 3
+[1493001507.7] packet3 d received
+[1493001507.7] ACK3 sent, expecting packet 4
+[1493001507.7] packet4 e received
+[1493001507.7] ACK4 sent, expecting packet 5
+[1493001507.71] packet5 f received
+[1493001507.71] ACK5 sent, expecting packet 6
+[1493001507.71] packet6 g received
+[1493001507.71] ACK6 sent, expecting packet 7
+[1493001507.71] packet7 h received
+[1493001507.71] ACK7 sent, expecting packet 8
+[1493001507.71] packet8 s received
+[1493001507.71] ACK8 sent, expecting packet 9
+[1493001507.71] packet9 d received
+[1493001507.71] ACK9 sent, expecting packet 10
+[1493001507.71] packet10 f received
+[1493001507.71] ACK10 sent, expecting packet 11
+[1493001507.71] packet11 s received
+[1493001507.71] ACK11 sent, expecting packet 12
+[1493001507.71] packet12 l received
+[1493001507.71] ACK12 sent, expecting packet 13
+[1493001507.71] packet13 d received
+[1493001507.71] ACK13 sent, expecting packet 14
+[1493001507.71] packet14 f received
+[1493001507.71] ACK14 sent, expecting packet 15
+[1493001507.71] packet15 j received
+[1493001507.71] ACK15 sent, expecting packet 16
+[1493001507.71] packet16 a received
+[1493001507.71] ACK16 sent, expecting packet 17
+[1493001507.71] packet17 o received
+[1493001507.71] ACK17 sent, expecting packet 18
+[1493001507.71] packet18 s received
+[1493001507.71] ACK18 sent, expecting packet 19
+[1493001507.71] packet19 d received
+[1493001507.71] ACK19 sent, expecting packet 20
+[1493001507.71] packet20 i received
+[1493001507.71] ACK20 sent, expecting packet 21
+[1493001507.71] packet21 f received
+[1493001507.71] ACK21 sent, expecting packet 22
+[1493001507.71] packet22 j discarded
+[1493001507.71] ACK21 sent, expecting packet 22
+[1493001507.71] packet23 a received
+[1493001507.71] ACK21 sent, expecting packet 22
+[1493001507.71] packet24 i received
+[1493001507.71] ACK21 sent, expecting packet 22
+[1493001507.71] packet25 d received
+[1493001507.71] ACK21 sent, expecting packet 22
+[1493001507.71] packet26 j received
+[1493001507.71] ACK21 sent, expecting packet 22
+[1493001508.21] packet22 j received
+[1493001508.21] ACK22 sent, expecting packet 23
+[1493001508.21] packet23 a received
+[1493001508.21] ACK23 sent, expecting packet 24
+[1493001508.21] packet24 i received
+[1493001508.21] ACK24 sent, expecting packet 25
+[1493001508.21] packet25 d received
+[1493001508.21] ACK25 sent, expecting packet 26
+[1493001508.21] packet26 j received
+[1493001508.21] ACK26 sent, expecting packet 27
+[1493001508.21] packet27 a received
+[1493001508.21] ACK27 sent, expecting packet 28
+[1493001508.21] packet28 i received
+[1493001508.21] ACK28 sent, expecting packet 29
+[1493001508.21] packet29 d received
+[1493001508.21] ACK29 sent, expecting packet 30
+[1493001508.21] packet30 f received
+[1493001508.21] ACK30 sent, expecting packet 31
+[1493001508.21] packet31 j received
+[1493001508.21] ACK31 sent, expecting packet 32
+[1493001508.21] packet32 i received
+[1493001508.21] ACK32 sent, expecting packet 33
+[1493001508.21] packet33 a received
+[1493001508.21] ACK33 sent, expecting packet 34
+[1493001508.21] packet34 u received
+[1493001508.21] ACK34 sent, expecting packet 35
+[1493001508.21] packet35 g received
+[1493001508.21] ACK35 sent, expecting packet 36
+[1493001508.21] packet36 h received
+[1493001508.21] ACK36 sent, expecting packet 37
+[1493001508.21] packet37 a discarded
+[1493001508.21] ACK36 sent, expecting packet 37
+[1493001508.71] packet37 a received
+[1493001508.71] ACK37 sent, expecting packet 38
+[1493001509.21] packet37 a received
+[1493001509.21] ACK37 sent, expecting packet 38
+[Summary] 2/45 packets discarded, loss rate = 0.0444444444444
+node>
+
+
+$ python dvnode.py 1111 2222 0.1 3333 0.5
+[1493001756.53] Node 1111 Routing Table
+- (0.5) -> Node 3333
+- (0.1) -> Node 2222
+[1493001834.48] Message received at Node 1111 from Node 3333
+[1493001834.48] Node 1111 Routing Table
+- (0.5) -> Node 3333
+- (0.1) -> Node 2222
+- (1.0) -> Node 4444; Next hop -> Node 3333
+[1493001834.48] Message sent from Node 1111 to Node 3333
+[1493001834.48] Message sent from Node 1111 to Node 2222
+[1493001834.48] Message received at Node 1111 from Node 2222
+[1493001834.48] Node 1111 Routing Table
+- (0.3) -> Node 3333; Next hop -> Node 2222
+- (0.1) -> Node 2222
+- (0.9) -> Node 4444; Next hop -> Node 2222
+[1493001834.48] Message sent from Node 1111 to Node 3333
+[1493001834.48] Message sent from Node 1111 to Node 2222
+[1493001834.48] Message received at Node 1111 from Node 2222
+[1493001834.48] Node 1111 Routing Table
+- (0.3) -> Node 3333; Next hop -> Node 2222
+- (0.1) -> Node 2222
+- (0.8) -> Node 4444; Next hop -> Node 2222
+[1493001834.48] Message sent from Node 1111 to Node 3333
+[1493001834.48] Message sent from Node 1111 to Node 2222
+
+$ python dvnode.py 2222 1111 0.1 3333 0.2 4444 0.8
+[1493001785.25] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.8) -> Node 4444
+[1493001834.48] Message received at Node 2222 from Node 4444
+[1493001834.48] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.8) -> Node 4444
+[1493001834.48] Message sent from Node 2222 to Node 1111
+[1493001834.48] Message sent from Node 2222 to Node 3333
+[1493001834.48] Message sent from Node 2222 to Node 4444
+[1493001834.48] Message received at Node 2222 from Node 3333
+[1493001834.48] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.7) -> Node 4444; Next hop -> Node 3333
+[1493001834.48] Message sent from Node 2222 to Node 1111
+[1493001834.48] Message sent from Node 2222 to Node 3333
+[1493001834.48] Message sent from Node 2222 to Node 4444
+[1493001834.48] Message received at Node 2222 from Node 1111
+[1493001834.48] Message received at Node 2222 from Node 4444
+[1493001834.48] Message received at Node 2222 from Node 1111
+[1493001834.48] Message received at Node 2222 from Node 1111
+[1493001834.48] Message received at Node 2222 from Node 3333
+[1493001834.48] Message received at Node 2222 from Node 4444
+
+$ python dvnode.py 3333 1111 0.5 2222 0.2 4444 0.5
+[1493001812.91] Node 3333 Routing Table
+- (0.5) -> Node 1111
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1493001834.48] Message received at Node 3333 from Node 4444
+[1493001834.48] Node 3333 Routing Table
+- (0.5) -> Node 1111
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1493001834.48] Message sent from Node 3333 to Node 1111
+[1493001834.48] Message sent from Node 3333 to Node 4444
+[1493001834.48] Message sent from Node 3333 to Node 2222
+[1493001834.48] Message received at Node 3333 from Node 1111
+[1493001834.48] Message received at Node 3333 from Node 4444
+[1493001834.48] Message received at Node 3333 from Node 2222
+[1493001834.48] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1493001834.48] Message sent from Node 3333 to Node 1111
+[1493001834.48] Message sent from Node 3333 to Node 4444
+[1493001834.48] Message sent from Node 3333 to Node 2222
+[1493001834.48] Message received at Node 3333 from Node 1111
+[1493001834.48] Message received at Node 3333 from Node 2222
+[1493001834.48] Message received at Node 3333 from Node 1111
+[1493001834.48] Message received at Node 3333 from Node 4444
+
+$ python dvnode.py 4444 2222 0.8 3333 0.5 last
+[1493001834.48] Node 4444 Routing Table
+- (0.5) -> Node 3333
+- (0.8) -> Node 2222
+[1493001834.48] Message sent from Node 4444 to Node 3333
+[1493001834.48] Message sent from Node 4444 to Node 2222
+[1493001834.48] Message received at Node 4444 from Node 3333
+[1493001834.48] Node 4444 Routing Table
+- (0.5) -> Node 3333
+- (0.7) -> Node 2222; Next hop -> Node 3333
+- (1.0) -> Node 1111; Next hop -> Node 3333
+[1493001834.48] Message sent from Node 4444 to Node 3333
+[1493001834.48] Message sent from Node 4444 to Node 2222
+[1493001834.48] Message received at Node 4444 from Node 2222
+[1493001834.48] Node 4444 Routing Table
+- (0.5) -> Node 3333
+- (0.7) -> Node 2222; Next hop -> Node 3333
+- (0.8) -> Node 1111; Next hop -> Node 2222
+[1493001834.48] Message sent from Node 4444 to Node 3333
+[1493001834.48] Message sent from Node 4444 to Node 2222
+[1493001834.48] Message received at Node 4444 from Node 2222
+[1493001834.48] Message received at Node 4444 from Node 3333
