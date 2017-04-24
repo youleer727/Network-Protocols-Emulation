@@ -159,6 +159,7 @@ class GBN:
                     print "[Summary] {}/{} packets discarded, loss rate = {}".format(discarded_pkt, total_pkt, ratio)
                     discarded_pkt = 0
                     total_pkt = 0
+                    prompt()
                 elif data[1] != '':
                     total_pkt += 1
                     # decide whether to drop or not
