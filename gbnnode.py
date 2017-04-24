@@ -117,7 +117,7 @@ class GBN:
 
     def dropper(self,determ_drop_count):
         if self.way_to_drop == DETERM_DROP:
-            if determ_drop_count % self.drop_param:
+            if determ_drop_count % self.drop_param == 0:
                 return True
             else:
                 return False
